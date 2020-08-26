@@ -4,10 +4,10 @@
 
 使用过程遇到问题，欢迎讨论。
 
-[TOC]
-
+[所有文件在Github下载](https://github.com/liusanchuan/awesome-android-jni)
+@[toc]
 ## 1 OpenCV动态库
-
+[github下载](https://github.com/liusanchuan/awesome-android-jni/tree/master/1.%20OpenCV.so)
 cmake 导入方法：
 
 ~~~shell
@@ -67,6 +67,7 @@ Java_com_example_myapplication_ImageAnlyness_byteArray2JNI(JNIEnv *env, jclass c
 
 
 ## 2. tensorflow-lite动态库
+[github下载](https://github.com/liusanchuan/awesome-android-jni/tree/master/2.%20tensorflow-lite.so)
 tensorflow在手机和嵌入式平台的解释器
 cmake导入方法：
 ~~~shell
@@ -113,6 +114,7 @@ Java_com_example_tflite_1jni2_MainActivity_stringFromJNI(
 }
 ~~~
 ## 3. caffe动态库
+[github下载](https://github.com/liusanchuan/awesome-android-jni/tree/master/3.%20caffe.so)
 这个库的JNI 用法略显诡异，但是诡异是为了简单妥协的。它包括两个库`libcaffe.so`,`libcaffe_jni.so`，后一个是对前一个的JNI层的封装。之所以要用它，是因为它把很多方法帮我们封装起来了，不然caffe还要依赖一大堆库，多大让你头大，我已经大过了。
 使用的时候就是用我们自己的JNI代码调用libcaffe_jni.so封装的函数，文件夹内有一个demo。
 ~~~shell
@@ -140,6 +142,7 @@ set_target_properties(sc_caffe_jni
 
 
 ## 3.5 caffe的aar库
+[github下载](https://github.com/liusanchuan/awesome-android-jni/tree/master/3.5%20caffe.aar)
 直接把它当做一个普通的jar包使用，很happy。其实就是对上面的库封装了一下，免去了很多步骤。
 
 （1） 把 caffe_android.aar文件复制到新项目的`app/libs`下
@@ -168,6 +171,7 @@ dependencies {
 
 
 ## 5. boost静态库
+[github下载](https://github.com/liusanchuan/awesome-android-jni/tree/master/5.%20boost.a)
 直接用，请看招：
 cmake
 ~~~shell
